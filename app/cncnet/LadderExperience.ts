@@ -9,7 +9,8 @@ namespace cncnet
 
     export class LadderExperience
     {
-        private readonly RECENT_GAMES_URL: string = "https://ladder.cncnet.org/api/v1/ladder/yr/games/recent/5";
+        public readonly LADDER_URL: string = "//ladder.cncnet.org";
+        private readonly RECENT_GAMES_URL: string = "//ladder.cncnet.org/api/v1/ladder/yr/games/recent/6";
         
         private recentGames: Array<Game>;
         private recentGamesStorage: WindowLocalStorage;
@@ -50,7 +51,6 @@ namespace cncnet
                 for (var i:number = 0; i < this.recentGames.length; i++)
                 {
                     var game: Game = this.recentGames[i];
-                    console.log("LadderExperience **", game);
                 }
             }
             else

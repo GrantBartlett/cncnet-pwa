@@ -1,11 +1,17 @@
-var dataUrl = "https://ladder.cncnet.org/api/v1/ladder/yr/games/recent/5";
+var dataUrl = "//ladder.cncnet.org/api/v1/ladder/yr/games/recent/5";
 var dataCache = "cncnet-data-v1";
 var cacheShell = "cncnet-shell-v1";
 var shellFiles = [
     '/',
     '/index.html',
     '/js/app.min.js',
+    '/js/material.min.js',
     '/css/app.min.css',
+    '/images/icon-192.png',
+    '/images/icon-512.png',
+    '/images/logo.png',
+    '/images/lost.png',
+    '/images/won.png',
 ];
 
 self.addEventListener('install', function(e) 

@@ -1,4 +1,3 @@
-html,body 
-{
-    height: 100%;
-}
+@import "vendor/_material";
+@import "app/_global";
+@import "app/components/_player-card";

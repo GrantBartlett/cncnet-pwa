@@ -5,24 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <meta name="theme-color" content="#317EFB"/>
+    <title>CnCNet Ladder</title>
     <link rel="stylesheet" type="text/css" href="css/app.min.css">
-    <!-- TODO add manifest here -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
-    <main class="main">
-        <div class="gameListCardTemplate" hidden>
-            <div class="mapName"></div>
-            <div class="mapPreview"></div>
-        </div>
+    <div id="loading" hidden>
+        <div class="mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
 
-        <div class="gameDetailCardTemplate" hidden>
-            <p class="playerName"></p>
-            <p class="playerPoints"></p>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title mdl-logo"><img src="images/logo.png" alt="CnCNet Logo"></span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="//ladder.cncnet.org">Ladder</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Menu</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="ladder.cncnet.org">Ladder</a>
+            </nav>
         </div>
-    </main>
+        <main class="mdl-layout__content">
+            <div class="page-content main">
+                <div id="recentGames" class="block">
+                    <h5 class="title">Recent Games</h5>
+                </div>
+
+                <!-- TODO 
+                <div id="top10Players" class="block">
+                    <h5 class="title">Top 10</h5>
+                </div>
+                -->
+            </div>
+        </main>
+    </div>
+
+    <div class="gameListCardTemplate" hidden>
+        <div class="player-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mapPreview">
+                <h2 class="mdl-card__title-text mapPlayers"></h2>
+                <div class="mdl-card__title-text  mapName"></div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect viewGame">
+                    View Game
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="playerListCardTemplate" hidden>
+        <div class="player-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text playerUsername"></h2>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect viewGame">
+                    View Profile
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/app.min.js" async></script>
+    <script src="js/material.min.js" async></script>
 </body>
 </html>
